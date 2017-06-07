@@ -1,7 +1,7 @@
-// This code requires the module 
+// Require the module 
 var Forecast = require('forecast');
  
-// This code initializes the module
+// Initialize 
 var forecast = new Forecast({
   service: 'darksky',
   key: '273426f477691b3057a726fc2c9f72ee',
@@ -13,13 +13,13 @@ var forecast = new Forecast({
   }
 });
  
-// This code retrieves weather information from coordinates in lagos
+// Retrieve weather information from coordinates (Lagos, Nigeri)
 forecast.get([6.465422, 3.406448], function(err, weather) {
   if(err) return console.dir(err);
   console.dir(weather);
 });
  
-// This code retrieves weather information, ignoring the cache 
+// Retrieve weather information, ignoring the cache 
 forecast.get([6.465422, 3.406448], true, function(err, weather) {
   if(err) return console.dir(err);
   console.dir(weather);
